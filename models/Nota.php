@@ -4,33 +4,51 @@
   
   class Nota extends ModeloBase{
 
-    public $nombre;
-    public $contenido;
+    public $usuario_id;
+    public $titulo;
+    public $descripcion;
 
     public function __construct(){
       parent::__construct();
     }
 
-    public function getNombre()
+    public function getUsuario_id()
     {
-        return $this->nombre;
+        return $this->usuario_id;
     }
 
-    public function setNombre($nombre)
+    public function setUsuario_id($usuario_id)
     {
-        $this->nombre = $nombre;
+        $this->usuario_id = $usuario_id;
 
     }
 
-    public function getContenido()
+    public function getTitulo()
     {
-        return $this->contenido;
+        return $this->titulo;
     }
 
-    public function setContenido($contenido)
+    public function setTitulo($titulo)
     {
-        $this->contenido = $contenido;
+        $this->titulo = $titulo;
 
+    }
+
+    public function getDescripcion()
+    {
+        return $this->descripcion;
+    }
+
+    public function setDescripcion($descripcion)
+    {
+        $this->descripcion = $descripcion;
+
+    }
+
+    public function guardar(){
+      $sql = "INSERT INTO notas ( usuario_id, titulo, descripcion, fecha ) VALUES ( {$this->usuario_id}, '{$this->titulo}', '{$this->descripcion}', CURDATE() );";
+      $guarado = $this->db->query( $sql );
+      return $guarado;
     }
 
   }
