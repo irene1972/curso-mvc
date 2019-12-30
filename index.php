@@ -2,8 +2,9 @@
 <h1>Bienvenido a mi web con MVC</h1>
 <?php
   //creación de un Controlador Frontal: se encarga de cargar un fichero y una acción u otra en función de lo que viene por la url
-  require_once 'controllers/UsuarioController.php';
-  require_once 'controllers/NotaController.php';
+  //require_once 'controllers/UsuarioController.php';
+  //require_once 'controllers/NotaController.php';
+  require_once 'autoload.php';
 
   if( isset($_GET['controller']) ){
   
