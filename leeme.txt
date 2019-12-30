@@ -1,0 +1,3 @@
+http://localhost:8080/curso-mvc/index.php?controller=Nota&action=listar
+http://localhost:8080/curso-mvc/index.php?controller=Usuario&action=mostrarTodos
+http://localhost:8080/curso-mvc/index.php?controller=Usuario&action=crear
