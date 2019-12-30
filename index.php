@@ -3,6 +3,7 @@
 <?php
   //creación de un Controlador Frontal: se encarga de cargar un fichero y una acción u otra en función de lo que viene por la url
   require_once 'controllers/UsuarioController.php';
+  require_once 'controllers/NotaController.php';
 
   if( isset($_GET['controller']) ){
   
@@ -20,6 +21,8 @@
       }else{
         echo "La página que buscas no existe";
       }
+    }else{
+      echo "La página que buscas no existe";  
     }
     
   }else{
