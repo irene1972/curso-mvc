@@ -52,7 +52,11 @@ class Usuario{
     $this->password = $password;
 
     //return $this;
-  }
+	}
+	
+	public function conseguirTodos(){
+		return "Sacando todos los usuarios";
+	}
 }
 
 ?>
