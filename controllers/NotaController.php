@@ -12,6 +12,9 @@
       $nota->setNombre("Nota1");
       $nota->setContenido("Hola Mundo PHP MVC");
 
+      //la pasamos como parámetro el nombre de la tabla a listar
+      $notas = $nota->conseguirTodos('notas');
+
       //vista
       require_once 'views/notas/listar.php';
 

@@ -10,9 +10,12 @@ class ModeloBase{
       $this->db = database::conectar();
     }
 
-    public function conseguirTodos(){
-      var_dump($this->db);
-      return "Sacando todos los usuarios";
+    public function conseguirTodos( $tabla ){
+      //var_dump($this->db);
+      //return "Sacando todos los usuarios";
+      $query = $this->db->query("SELECT * FROM $tabla ORDER BY id DESC");
+      return $query;
+
     }
 
   }

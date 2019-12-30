@@ -7,7 +7,7 @@
       require_once 'models/Usuario.php';
 
       $usuario = new Usuario();
-      $todos_los_usuarios = $usuario->conseguirTodos();
+      $todos_los_usuarios = $usuario->conseguirTodos('usuarios');
 
       //require_once '../views/usuarios/mostrar-todos.php';  --> al tener el require del controlador en el index.php cuando buscamos un archivo debemos hacerlo desde la raiz, sino da error
       require_once 'views/usuarios/mostrar-todos.php';
